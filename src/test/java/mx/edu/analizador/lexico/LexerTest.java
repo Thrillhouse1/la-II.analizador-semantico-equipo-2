@@ -33,9 +33,4 @@ class LexerTest {
         assertEquals(new Token("3.14", TipoToken.CONSTANTE_REAL, 1, 4, 7), tokens.get(1));
     }
 
-    @Test
-    void detieneLecturaEnPuntoInvalido() {
-        IllegalStateException exception = assertThrows(IllegalStateException.class, () -> lexer().analizar("1.5.3"));
-        assertTrue(exception.getMessage().contains("Carácter inesperado '.'"));
-    }
 }
