@@ -51,7 +51,7 @@ public class FuncionNoDeclarada {
             if (posicionCierre != -1 && posicionCierre + 1 < tokens.size()) {
             String despues = tokens.get(posicionCierre + 1).lexema();
 
-            if (tipo.equals("void") || tipo.equals("int") || tipo.equals("char") || tipo.equals("float") || tipo.equals("double")) {
+            if (tipo.equals("void") || tipo.equals("int") || tipo.equals("char") || tipo.equals("float") || tipo.equals("double") || tipo.equals("bool")) {
 
             if (despues.equals(";") || despues.equals("{")) {
             boolean existe = false;
@@ -96,7 +96,6 @@ public class FuncionNoDeclarada {
 
           // se recorre la lista para buscar el nombre de la funcion actual
           for (int j = 0; j < funciones.size(); j++) {
-
           if (funciones.get(j).equals(actual.lexema())) {
          existe = true;
          break;
